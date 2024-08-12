@@ -9,7 +9,7 @@ const mainRouter = require("./routes/mainRouter.js")
 const port = process.env.PORT || 3000
 
 
-app.use(cors({origin: "https://quickchat-backend-production.up.railway.app/", credentials: true}))
+app.use(cors({origin: "https://quick-chat-frontend-agen.vercel.app/", credentials: true}))
 app.use(cookieParser())
 app.use(express.json())
 
