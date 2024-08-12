@@ -6,7 +6,7 @@ const SQL = 'CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY GENERATED 
 async function main() {
     console.log("seeding...");
     const client = new Client({
-      connectionString: "postgresql://admin:admin@localhost:5432/quickchat"
+      connectionString: process.env.DATABASE_URL
     });
     await client.connect();
     await client.query(SQL);
