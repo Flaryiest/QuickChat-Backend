@@ -31,7 +31,7 @@ async function logIn(req, res) {
                     res.status(202).cookie("jwt", token, {
                         sameSite:'None',
                         secure: true, 
-                        path: "/",
+                        path: '/',
                         httpOnly: true,
                         expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
                     }).send("cookie")
